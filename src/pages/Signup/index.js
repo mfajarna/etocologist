@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { Gap, showMessage } from '../../utils'
 import ImagePicker from 'react-native-image-picker';
 import { useDispatch } from 'react-redux';
+import { CustomButton, CustomTextInput } from '../../components/atoms';
 
 
 const Signup = ({navigation}) => {
@@ -51,11 +52,19 @@ const Signup = ({navigation}) => {
             <TouchableOpacity onPress={addPhoto}>
                 <View style={styles.borderPhoto}>
                     {photo ? <Image source={photo} style={styles.photoImage} /> : <View style={styles.photoContainer}>
-                        <Text style={styles.addPhoto}>+ Photo</Text>
+                        <Text style={styles.addPhoto}>Add Photo</Text>
                     </View>}
                 </View>
             </TouchableOpacity>
+            <Gap height={35}/>
             </View>
+            <CustomTextInput label="Email" placeholder="Masukan Email Anda" />
+            <Gap height={10}/>
+            <CustomTextInput label="Password" placeholder="Masukan Password Anda" />
+            <Gap height={10}/>
+            <CustomTextInput label="Confirmation Password" placeholder="Masukan Kembali Password Anda" />
+            <Gap height={30}/>
+            <CustomButton text="Selanjutnya" font={12} />
         </View>
     )
 }
@@ -105,7 +114,7 @@ const styles = StyleSheet.create({
         width: 80,
         height: 80,
         borderRadius: 80,
-        backgroundColor: '#F0F0F0',
+        backgroundColor: '#EDE5F3',
         padding: 20,
         justifyContent: 'center',
         alignItems: 'center'

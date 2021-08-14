@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
         padding: 7,
         borderRadius: 10,
   }),
-  text: textColor => ({
-        fontSize: 18,
-        fontFamily: 'Poppins-SemiBold',
+  text: textColor  => ({
+        fontSize: 17,
+        fontFamily: 'Poppins-Medium',
         color: textColor,
         textAlign: 'center',
   }),
