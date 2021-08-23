@@ -64,7 +64,7 @@ const Signup = ({navigation}) => {
             <Gap height={10}/>
             <CustomTextInput label="Confirmation Password" placeholder="Masukan Kembali Password Anda" />
             <Gap height={30}/>
-            <CustomButton text="Selanjutnya" font={12} />
+            <CustomButton text="Selanjutnya" font={12} onPress={() => navigation.navigate('SignProfile')}/>
         </View>
     )
 }
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 33,
         paddingTop: 35
     },
-        title:{
+    title:{
         fontFamily: 'Poppins-SemiBold',
         fontSize: 22,
         color: '#493657',
