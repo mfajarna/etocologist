@@ -66,10 +66,8 @@ const Dashboard = ({navigation}) => {
                 onBackdropPress={() => setModalVisible(false)}
                 // style={styles.view}
                 >
-             <DefaultModalContent onPress={toggleModal} />
-             
+             <DefaultModalContent onPress={toggleModal} /> 
         </Modal>
-
         </View>
     )
 }

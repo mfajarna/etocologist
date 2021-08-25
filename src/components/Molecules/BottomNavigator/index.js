@@ -11,7 +11,7 @@ import {
 
 const Icon = ({label, focus}) => {
   switch (label) {
-    case 'Home':
+    case 'Dashboard':
       return focus ? <Ic_home_on /> : <Ic_home_off />;
     case 'Messages':
       return focus ? <Ic_messages_on /> : <Ic_messages_off />;
@@ -72,7 +72,6 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
             style={{flex: 1}}>
             <View style={styles.nav}>
               <Icon style={styles.icon} label={label} focus={isFocused} />
-              <Text style={styles.label}>{label}</Text>
             </View>
           </TouchableOpacity>
         );
@@ -88,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 13,
     paddingBottom: 8,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
   },
   label: {
     fontSize: 12,

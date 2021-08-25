@@ -4,14 +4,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard, IntroScreen, Messages, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
 import { BottomNavigator } from '../components';
 
-
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
     return(
-    <Tab.Navigator>
-         <Tab.Screen name="Home" component={Dashboard} />
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
+         <Tab.Screen name="Dashboard" component={Dashboard}/>
          <Tab.Screen name="Messages" component={Messages} />
          <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
@@ -24,11 +23,6 @@ const Router = () => {
             <Stack.Screen
                 name="SplashScreen"
                 component={SplashScreen}
-                options={{headerShown: false}}
-            />
-            <Stack.Screen
-                name="MainApp"
-                component={MainApp}
                 options={{headerShown: false}}
             />
             <Stack.Screen
@@ -69,6 +63,11 @@ const Router = () => {
             <Stack.Screen
                 name="Profile"
                 component={Profile}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="MainApp"
+                component={MainApp}
                 options={{headerShown: false}}
             />
         </Stack.Navigator>

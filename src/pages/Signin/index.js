@@ -86,7 +86,7 @@ const Signin = ({navigation}) => {
             <Gap height={12}/>
             <CustomTextInput label="Password" placeholder="Masukan Password" />
             <Gap height={40}/>
-            <CustomButton text="Sign in" onPress={() => navigation.replace('Dashboard')}/>
+            <CustomButton text="Sign in" onPress={() => navigation.replace('MainApp')}/>
             <Gap height={12}/>
             <View style={styles.signupMethod}>
                 <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>

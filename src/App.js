@@ -11,6 +11,7 @@ const MainApp = () => {
 
   LogBox.ignoreLogs(['Warning: ...']);
   LogBox.ignoreAllLogs();
+
   return(
     <NavigationContainer>
       <Router />
