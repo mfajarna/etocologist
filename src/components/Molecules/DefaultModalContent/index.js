@@ -2,8 +2,12 @@ import React from 'react'
 import { StyleSheet, Text, View} from 'react-native'
 import FiturContent from '../ContentFitur'
 import Gap from '../../../utils/Gap'
+import { useNavigation } from '@react-navigation/native'
 
 const DefaultModalContent = ({onPress}) => {
+
+    const navigation = useNavigation();
+
     return (
         <View style={styles.content}>
             <Text style={styles.title}>Layanan E-Tocologist</Text>
@@ -15,7 +19,7 @@ const DefaultModalContent = ({onPress}) => {
             <Gap height={10} />
             <View style={styles.fiturAtas}>
                 <FiturContent label="Kesehatan"/>
-                <FiturContent label="Find Us"/>
+                <FiturContent label="Find Us" onPress={() => navigation.navigate('FindUs')}/>
                 <FiturContent label="Upload Usg"/>
             </View>
         </View>

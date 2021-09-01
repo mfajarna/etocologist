@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard, IntroScreen, Messages, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
 import { BottomNavigator } from '../components';
+import FindUs from '../pages/FindUs';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -68,6 +69,11 @@ const Router = () => {
             <Stack.Screen
                 name="MainApp"
                 component={MainApp}
+                options={{headerShown: false}}
+            />
+           <Stack.Screen
+                name="FindUs"
+                component={FindUs}
                 options={{headerShown: false}}
             />
         </Stack.Navigator>

@@ -89,20 +89,18 @@ const Signin = ({navigation}) => {
             <CustomButton text="Sign in" onPress={() => navigation.replace('MainApp')}/>
             <Gap height={12}/>
             <View style={styles.signupMethod}>
-                <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                     <Text style={styles.signup}>Sign up now</Text>
-                 </TouchableOpacity>
+                 </TouchableOpacity> */}
                  
-                 <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+                 {/* <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                      <View style={{ flexDirection: 'row' }}>
                         <Text style={styles.signup}>Sign up with  </Text><Ic_google /><Text style={styles.signupGoogle}> Google</Text>
                      </View>
-                 </TouchableOpacity>
+                 </TouchableOpacity> */}
             </View>
             <Gap height={45} />
             <View style={styles.footer}>
-                <Text style={styles.signup}>Or sign in with</Text>
-                <Gap height={2} />
                 {/* <View style={styles.google}>
                     <Ic_google />
                     <Text style={styles.textGoogle}>Google</Text>

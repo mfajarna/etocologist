@@ -45,7 +45,7 @@ const Dashboard = ({navigation}) => {
             <View style={styles.layanan}>
                 <Text style={styles.textLayanan}>Layanan Kami</Text>
                 <View style={styles.fiturContent}>
-                    <FiturContent label="Poli Anak" />
+                    <FiturContent label="Poli Anak" onPress={() => navigation.navigate('FindUs')} />
                     <FiturContent label="Poli Ibu"/>
                     <FiturContent label="Poli Massas"/>
                     <FiturContent label="Lainnya" onPress={toggleModal}/>
