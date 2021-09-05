@@ -2,13 +2,20 @@ import React from 'react'
 import { useEffect } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Ic_logo, Il_Support } from '../../assets'
-import { Gap } from '../../utils'
+import { Gap, getData } from '../../utils'
 
 const SplashScreen = ({navigation}) => {
 
     useEffect(() => {
         setTimeout(()=> {
-            navigation.replace('IntroScreen')
+            getData('token').then(res => {
+                if(res)
+                {
+                    navigation.reset({index: 0, routes:[{name: 'MainApp'}]})
+                }else{
+                    navigation.replace('IntroScreen')
+                }
+            })
         },2000)
     },[]);
 

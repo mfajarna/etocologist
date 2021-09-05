@@ -1,23 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from 'react-native-modal';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Button } from 'react-native'
 import { Il_cover_dashboard } from '../../assets/illustrations'
 import { DefaultModalContent, FiturContent } from '../../components'
 import { DummyImage1 } from '../../assets/dummy';
 import { Ic_notification } from '../../assets/icons';
+import { getData } from '../../utils';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Dashboard = ({navigation}) => {
 
     const [isModalVisible, setModalVisible] = useState(false);
-
+    const [userProfile, setUserProfile] = useState({});
+    useEffect(() => {
+        getData('userProfile').then(res => {
+            setUserProfile(res);
+        })
+    },[])
+    
     const toggleModal = () => {
         setModalVisible(!isModalVisible)
     }
+
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <View>
-                    <Text style={styles.text}>Hi Gebby!</Text>
+                    <Text style={styles.text}>Hi {userProfile.name}!</Text>
                     <Text style={styles.desc}>Apa kabar hari ini?</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
@@ -45,8 +55,8 @@ const Dashboard = ({navigation}) => {
             <View style={styles.layanan}>
                 <Text style={styles.textLayanan}>Layanan Kami</Text>
                 <View style={styles.fiturContent}>
-                    <FiturContent label="Poli Anak" onPress={() => navigation.navigate('FindUs')} />
-                    <FiturContent label="Poli Ibu"/>
+                    <FiturContent label="Poli Anak" onPress={() => navigation.navigate('PoliAnak')} />
+                    <FiturContent label="Poli Ibu"  onPress={() => navigation.navigate('PoliIbu')}/>
                     <FiturContent label="Poli Massas"/>
                     <FiturContent label="Lainnya" onPress={toggleModal}/>
                 </View>

@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard, IntroScreen, Messages, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
 import { BottomNavigator } from '../components';
 import FindUs from '../pages/FindUs';
+import PoliIbu from '../pages/PoliIbu';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -75,6 +76,12 @@ const Router = () => {
                 name="FindUs"
                 component={FindUs}
                 options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="PoliIbu"
+                component={PoliIbu}
+                options={{headerShown: false}}
+                
             />
         </Stack.Navigator>
     )
