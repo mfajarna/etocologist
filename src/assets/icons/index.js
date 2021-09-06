@@ -18,6 +18,7 @@ import Ic_messages_on from './ic_messages_on.svg';
 import Ic_profile_off from './ic_profile_off.svg';
 import Ic_profile_on from './ic_profile_on.svg';
 import Ic_arrow_back from './ic_arrow_back.svg';
+import Ic_chart from './ic_chart.svg'
 
 export {
     Ic_logo,
@@ -39,5 +40,6 @@ export {
     Ic_messages_on,
     Ic_profile_off,
     Ic_profile_on,
-    Ic_arrow_back
+    Ic_arrow_back,
+    Ic_chart
 }

@@ -28,7 +28,7 @@ const ProfileKesehatan = ({nama,umur,tinggi,gpa,jarak_kehamilan,siklus_haid,kb,r
                 </View>
             </View>
             <View style={styles.container}>
-                <Text style={styles.title}>Biodata Kesehatan</Text>
+                <Text style={styles.title}>Informasi Kesehatan</Text>
                 <View style={styles.indexKesehatan}>
                     <View style={styles.index}>
                         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>

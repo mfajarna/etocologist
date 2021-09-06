@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native'
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import { useDispatch, useSelector } from 'react-redux';
+import { ButtonChart } from '../../atoms'
 import { getDataPoliIbu, getDataProsesKehamilan } from '../../../redux/action';
 import ProfileKesehatan from '../ProfileKesehatan';
 import RiwayatKonsultasi from '../RiwayatKonsultasi';
@@ -42,7 +43,7 @@ const renderTabBar = props => (
 
 const monitoringKesehatan = () => {
 
-  
+    const navigation = useNavigation()
     const dispatch = useDispatch();
     const{dataBiodata} = useSelector(state => state.poliibuReducer);
     useEffect(() => {
@@ -55,6 +56,7 @@ const monitoringKesehatan = () => {
     }else{
        
         return(
+          <>
           <ProfileKesehatan
             nama={dataBiodata.ibu.nama}
             umur={dataBiodata.ibu.umur}
@@ -65,6 +67,12 @@ const monitoringKesehatan = () => {
             kb={dataBiodata.riwayat.kb_sebelum_hamil}
             riwayat_penyakit={dataBiodata.riwayat.riwayat_penyakit}
           />
+
+          <View style={{ marginTop: 15 }}>
+            <ButtonChart title="Ibu" onPress={() => navigation.navigate('GrafikIbu')} />
+        
+          </View>
+          </>
         )
       }
     }

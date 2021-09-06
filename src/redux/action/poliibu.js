@@ -34,3 +34,20 @@ export const getDataProsesKehamilan = () => dispatch => {
         console.log(err.message)
     })
 }
+
+export const getDataGrafikIbu = () => dispatch => {
+    getData('token').then(resToken => {
+        axios.get(`${API_HOST.url}/data-grafik`, {
+            headers:{
+                Authorization: resToken.value
+            }
+        }).then(res =>{
+            dispatch({type: 'SET_GRAFIK_IBU', value: res.data.data})
+            
+        }).catch(err => {
+            console.log(err.message)
+        })
+    }).catch(err => {
+        console.log(err.message);
+    })
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dashboard, IntroScreen, Messages, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
+import { Dashboard, IntroScreen, Messages, PoliAnak, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
 import { BottomNavigator } from '../components';
 import FindUs from '../pages/FindUs';
 import PoliIbu from '../pages/PoliIbu';
+import GrafikIbu from '../pages/GrafikIbu';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -82,6 +83,16 @@ const Router = () => {
                 component={PoliIbu}
                 options={{headerShown: false}}
                 
+            />
+            <Stack.Screen
+                name="PoliAnak"
+                component={PoliAnak}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="GrafikIbu"
+                component={GrafikIbu}
+                options={{headerShown: false}}
             />
         </Stack.Navigator>
     )

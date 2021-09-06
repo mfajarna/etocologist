@@ -7,6 +7,8 @@ import SuccessLogin from "./SuccessLogin";
 import Dashboard from "./Dashboard";
 import Messages from "./Messages";
 import Profile from './Profile'
+import PoliIbu from "./PoliIbu";
+import PoliAnak from "./PoliAnak";
 
 export {
     SplashScreen,
@@ -17,5 +19,7 @@ export {
     SuccessLogin,
     Dashboard,
     Messages,
-    Profile
+    Profile,
+    PoliIbu,
+    PoliAnak
 }
