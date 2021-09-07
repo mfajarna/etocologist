@@ -9,6 +9,7 @@ import Messages from "./Messages";
 import Profile from './Profile'
 import PoliIbu from "./PoliIbu";
 import PoliAnak from "./PoliAnak";
+import DetailProfileAnak from "./DetailProfileAnak";
 
 export {
     SplashScreen,
@@ -21,5 +22,6 @@ export {
     Messages,
     Profile,
     PoliIbu,
-    PoliAnak
+    PoliAnak,
+    DetailProfileAnak
 }

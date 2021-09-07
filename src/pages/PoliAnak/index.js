@@ -28,7 +28,10 @@ const PoliAnak = ({navigation}) => {
                             key={item.id}
                             tgl_lahir = {item.tanggal_lahir}
                             jenis_kelamin = {item.jenis_kelamin}
-                            nama={item.nama} />
+                            nama={item.nama}
+                            onPress={() => navigation.navigate('DetailProfileAnak', item)}
+                            />
+                            
                         )
                 })}
             </View>

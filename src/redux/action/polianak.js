@@ -16,3 +16,23 @@ export const getDataAnak = () => dispatch => {
         console.log(err.message)
     })
 }
+
+export const getDataGrafikAnak = (id) => dispatch => {
+
+
+    getData('token').then(resToken => {
+        axios.get(`${API_HOST.url}/grafik-anak?id_anak=${id}`, {
+            headers:{
+                Authorization: resToken.value
+            }
+        }).then(res =>{
+            dispatch({type: 'SET_GRAFIK_ANAK', value: res.data.data})
+            
+            
+        }).catch(err => {
+            console.log(err.message)
+        })
+    }).catch(err => {
+        console.log(err.message);
+    })
+}
