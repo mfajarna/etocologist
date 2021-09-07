@@ -1,7 +1,10 @@
 const initBiodata = {
     dataBiodata: [],
     dataProsesKehamilan: [],
-    dataGrafik: [],
+    dataGrafik: [{
+        umur_kehamilan: 0,
+        bb: 10
+    }],
 }
 
 export const poliibuReducer = (state = initBiodata, action) => {

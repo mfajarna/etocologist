@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import { Headers } from '../../components/atoms'
 import {
@@ -6,27 +6,31 @@ import {
 } from "react-native-chart-kit";
 import { useDispatch, useSelector } from 'react-redux';
 import { getDataGrafikIbu } from '../../redux/action/poliibu';
+import { API_HOST, getData } from '../../utils';
+import axios from 'axios';
+import { compose } from 'redux';
 
 
 const GrafikIbu = ({navigation}) => {
 
-   
     const dispatch = useDispatch();
-
     const{dataGrafik} = useSelector(state => state.poliibuReducer);
 
-    var array = dataGrafik.map((obj) => {
-        return obj.umur_kehamilan
-    })
-
-    var array2 = dataGrafik.map((obj) => {
-        return obj.bb
-    })
+    console.log(dataGrafik)
 
 
     useEffect(() => {
         dispatch(getDataGrafikIbu())
+       
     },[])
+
+    var array = dataGrafik.map(item => {
+        return item.umur_kehamilan
+    })
+
+    var array2 = dataGrafik.map(item => {
+        return item.bb
+    })
 
 
     const screenWidth = Dimensions.get("window").width;
@@ -59,8 +63,9 @@ const GrafikIbu = ({navigation}) => {
                     ],
                     legend: ["Grafik Kesehatan Ibu"]
                     }}
-                    yAxisSuffix=" Kg"
+                
                     xAxisLabel =" Minggu "
+                    yAxisSuffix = " Kg"
                     bezier
                     verticalLabelRotation={0}
                     height={260}
