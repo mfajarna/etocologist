@@ -7,6 +7,8 @@ import FindUs from '../pages/FindUs';
 import PoliIbu from '../pages/PoliIbu';
 import GrafikIbu from '../pages/GrafikIbu';
 import GrafikAnak from '../pages/GrafikAnak';
+import Konfirmasi from '../pages/Konfirmasi';
+import Chatting from '../pages/Chatting';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -103,6 +105,16 @@ const Router = () => {
             <Stack.Screen
                 name="GrafikAnak"
                 component={GrafikAnak}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Konfirmasi"
+                component={Konfirmasi}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Chatting"
+                component={Chatting}
                 options={{headerShown: false}}
             />
         </Stack.Navigator>

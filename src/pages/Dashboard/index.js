@@ -7,21 +7,32 @@ import { DummyImage1 } from '../../assets/dummy';
 import { Ic_notification } from '../../assets/icons';
 import { getData } from '../../utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useDispatch, useSelector } from 'react-redux';
+import { getDataProfile } from '../../redux/action';
 
 const Dashboard = ({navigation}) => {
 
+    const dispatch = useDispatch();
     const [isModalVisible, setModalVisible] = useState(false);
     const [userProfile, setUserProfile] = useState({});
+
+    const{dataProfile} = useSelector(state => state.profileReducer);
     useEffect(() => {
+       
+        dispatch(getDataProfile());
         getData('userProfile').then(res => {
             setUserProfile(res);
+        })
+        getData('user').then(resData => {
+            console.log('res data',resData);
         })
     },[])
     
     const toggleModal = () => {
         setModalVisible(!isModalVisible)
     }
-
+    
+    console.log('data profilea', dataProfile);
 
     return (
         <View style={styles.container}>

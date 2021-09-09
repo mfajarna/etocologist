@@ -12,8 +12,8 @@ const DefaultModalContent = ({onPress}) => {
         <View style={styles.content}>
             <Text style={styles.title}>Layanan E-Tocologist</Text>
             <View style={styles.fiturAtas}>
-                <FiturContent label="Poli Anak"/>
-                <FiturContent label="Poli Ibu"/>
+                <FiturContent label="Poli Anak" onPress={() => navigation.navigate('PoliAnak')}/>
+                <FiturContent label="Poli Ibu" onPress={() => navigation.navigate('PoliIbu')}/>
                 <FiturContent label="Poli Massas"/>
             </View>
             <Gap height={10} />
