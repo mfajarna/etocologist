@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dashboard, DetailProfileAnak, IntroScreen, Messages, PoliAnak, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin } from '../pages';
+import { Dashboard, DetailProfileAnak, IntroScreen, Messages, PoliAnak, Profile, Signin, SignProfile, Signup, SplashScreen, SuccessLogin, Uploadusg } from '../pages';
 import { BottomNavigator } from '../components';
 import FindUs from '../pages/FindUs';
 import PoliIbu from '../pages/PoliIbu';
@@ -9,6 +9,7 @@ import GrafikIbu from '../pages/GrafikIbu';
 import GrafikAnak from '../pages/GrafikAnak';
 import Konfirmasi from '../pages/Konfirmasi';
 import Chatting from '../pages/Chatting';
+import UploadPhoto from '../pages/UploadPhoto';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -115,6 +116,16 @@ const Router = () => {
             <Stack.Screen
                 name="Chatting"
                 component={Chatting}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Uploadusg"
+                component={Uploadusg}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="UploadPhoto"
+                component={UploadPhoto}
                 options={{headerShown: false}}
             />
         </Stack.Navigator>

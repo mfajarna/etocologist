@@ -4,6 +4,7 @@ import Select from "./Select"
 import Headers from "./Headers"
 import Loading from "./Loading"
 import ButtonChart from "./ButtonChart"
+import FloatingButton from "./FloatingButton"
 
 export {
     CustomButton,
@@ -11,5 +12,6 @@ export {
     Select,
     Headers,
     Loading,
-    ButtonChart
+    ButtonChart,
+    FloatingButton
 }

@@ -14,3 +14,20 @@ export const getDataProfile = () => dispatch => {
         })
     })
 }
+
+
+export const getDataUsg = (id_ibu) => dispatch => {
+    getData('token').then(resToken => {
+        axios.get(`${API_HOST.url}/photo-usg?id_ibu=${id_ibu}`,{
+            headers:{
+                Authorization: resToken.value
+            }
+        }).then(res => {
+            dispatch({type: "SET_USG", value: res.data.data})
+        }).catch(err => {
+            console.log(err.message)
+        })
+    }).catch(err =>{
+        console.log(err.message)
+    })
+}

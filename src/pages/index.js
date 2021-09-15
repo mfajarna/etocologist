@@ -10,6 +10,7 @@ import Profile from './Profile'
 import PoliIbu from "./PoliIbu";
 import PoliAnak from "./PoliAnak";
 import DetailProfileAnak from "./DetailProfileAnak";
+import Uploadusg from "./Uploadusg";
 
 export {
     SplashScreen,
@@ -23,5 +24,6 @@ export {
     Profile,
     PoliIbu,
     PoliAnak,
-    DetailProfileAnak
+    DetailProfileAnak,
+    Uploadusg
 }

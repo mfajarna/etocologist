@@ -16,8 +16,6 @@ const Profile = ({navigation}) => {
 
     const{dataProfile} = useSelector(state => state.profileReducer);
 
-    console.log('data profilea', dataProfile);
-
     const onLogout = () => {
         AsyncStorage.multiRemove(['userProfile','token']).then(()=> {
         navigation.reset({index: 0, routes:[{name: 'SignIn'}]})

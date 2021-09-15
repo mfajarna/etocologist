@@ -20,7 +20,7 @@ const DefaultModalContent = ({onPress}) => {
             <View style={styles.fiturAtas}>
                 <FiturContent label="Kesehatan"/>
                 <FiturContent label="Find Us" onPress={() => navigation.navigate('FindUs')}/>
-                <FiturContent label="Upload Usg"/>
+                <FiturContent label="Upload Usg" onPress={() => navigation.reset({index: 0, routes:[{name: 'Uploadusg'}]})}/>
             </View>
         </View>
     )

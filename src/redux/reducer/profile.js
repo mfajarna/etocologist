@@ -1,5 +1,6 @@
 const initProfile = {
-    dataProfile: []
+    dataProfile: [],
+    dataUsg: [],
 }
 
 export const profileReducer = (state = initProfile, action) => {
@@ -8,6 +9,14 @@ export const profileReducer = (state = initProfile, action) => {
         return {
             ...state,
             dataProfile : action.value
+        }
+    }
+
+    if(action.type === 'SET_USG')
+    {
+        return{
+            ...state,
+            dataUsg: action.value
         }
     }
 

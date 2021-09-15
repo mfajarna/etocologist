@@ -31,8 +31,7 @@ const Dashboard = ({navigation}) => {
     const toggleModal = () => {
         setModalVisible(!isModalVisible)
     }
-    
-    console.log('data profilea', dataProfile);
+
 
     return (
         <View style={styles.container}>
