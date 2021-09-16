@@ -10,6 +10,9 @@ import GrafikAnak from '../pages/GrafikAnak';
 import Konfirmasi from '../pages/Konfirmasi';
 import Chatting from '../pages/Chatting';
 import UploadPhoto from '../pages/UploadPhoto';
+import Edukasi from '../pages/Edukasi';
+import Antrian from '../pages/Antrian';
+import NoAntrian from '../pages/NoAntrian';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -126,6 +129,21 @@ const Router = () => {
             <Stack.Screen
                 name="UploadPhoto"
                 component={UploadPhoto}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Edukasi"
+                component={Edukasi}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="Antrian"
+                component={Antrian}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen
+                name="NoAntrian"
+                component={NoAntrian}
                 options={{headerShown: false}}
             />
         </Stack.Navigator>

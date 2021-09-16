@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { Ic_cek_kesehatan, Ic_find_us, Ic_lainnya, Ic_poli_anak, Ic_poli_ibu, Ic_poli_massas, Ic_upload_usg } from '../../../assets/icons'
+import { Ic_cek_kesehatan, Ic_find_us, Ic_lainnya, Ic_poli_anak, Ic_poli_ibu, Ic_poli_massas, Ic_upload_usg, Ic_antrian } from '../../../assets/icons'
 
 const FiturContent = ({label, onPress}) => {
 
@@ -20,6 +20,14 @@ const FiturContent = ({label, onPress}) => {
          return(
             <View style={{ alignItems: 'center' }}>
                  <Ic_poli_ibu />
+            </View>
+            )
+        }
+        if(label === "No Antrian")
+        {
+         return(
+            <View style={{ alignItems: 'center' }}>
+                 <Ic_antrian />
             </View>
             )
         }

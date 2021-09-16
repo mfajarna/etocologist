@@ -10,9 +10,9 @@ const Select = ({label, value, onSelectChange, type}) => {
                 <Picker
                         selectedValue={value}
                         onValueChange={(itemValue) => onSelectChange(itemValue) }>
-                        <Picker.Item label="-- Pilih Jenis Kelamin --" value="" style={styles.item} />
-                        <Picker.Item label="Laki-Laki" value="L" style={styles.item} />
-                        <Picker.Item label="Perempuan" value="P" style={styles.item} />
+                        <Picker.Item label="Poli Anak" value="Poli Anak" style={styles.item} />
+                        <Picker.Item label="Poli Ibu" value="Poli Ibu" style={styles.item} />
+                        <Picker.Item label="Poli Umum" value="Poli Umum" style={styles.item} />
                 </Picker>
              </View>
         </View>

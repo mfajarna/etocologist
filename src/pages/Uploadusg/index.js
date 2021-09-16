@@ -27,7 +27,7 @@ const Uploadusg = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Headers title="Upload Photo" subTitle="Upload Photo USG" onBack={() => navigation.reset({index: 0, routes:[{name: 'MainApp'}]})} />
+            <Headers title="Gallery Photo" subTitle="Gallery Foto USG" onBack={() => navigation.reset({index: 0, routes:[{name: 'MainApp'}]})} />
             <View style={styles.content}>
             <FloatingButton onPress={() => navigation.navigate('UploadPhoto', id_ibu)}/>
             <ScrollView>

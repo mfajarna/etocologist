@@ -28,6 +28,7 @@ const Dashboard = ({navigation}) => {
         })
     },[])
     
+    console.log(dataProfile);
     const toggleModal = () => {
         setModalVisible(!isModalVisible)
     }
@@ -57,7 +58,7 @@ const Dashboard = ({navigation}) => {
                         <Text style={styles.textDashboard}>dari bahaya virus covid 19!</Text>
                     </View>
                     <View style={styles.coverButton}>
-                        <TouchableOpacity activeOpacity={0.6} style={styles.button}>
+                        <TouchableOpacity activeOpacity={0.6} style={styles.button} onPress={() => navigation.navigate('Edukasi')}>
                             <Text style={styles.textButton}>Info Covid</Text>
                         </TouchableOpacity>
                     </View>
@@ -67,7 +68,7 @@ const Dashboard = ({navigation}) => {
                 <View style={styles.fiturContent}>
                     <FiturContent label="Poli Anak" onPress={() => navigation.navigate('PoliAnak')} />
                     <FiturContent label="Poli Ibu"  onPress={() => navigation.navigate('PoliIbu')}/>
-                    <FiturContent label="Poli Massas"/>
+                    <FiturContent label="No Antrian" onPress={() => navigation.navigate('NoAntrian')}/>
                     <FiturContent label="Lainnya" onPress={toggleModal}/>
                 </View>
             </View>

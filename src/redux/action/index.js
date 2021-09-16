@@ -3,3 +3,4 @@ export * from './global';
 export * from './profile';
 export * from './poliibu';
 export * from './polianak';
+export * from './antrian';

@@ -14,11 +14,10 @@ const DefaultModalContent = ({onPress}) => {
             <View style={styles.fiturAtas}>
                 <FiturContent label="Poli Anak" onPress={() => navigation.navigate('PoliAnak')}/>
                 <FiturContent label="Poli Ibu" onPress={() => navigation.navigate('PoliIbu')}/>
-                <FiturContent label="Poli Massas"/>
+                {/* <FiturContent label="Poli Massas"/> */}
             </View>
             <Gap height={10} />
             <View style={styles.fiturAtas}>
-                <FiturContent label="Kesehatan"/>
                 <FiturContent label="Find Us" onPress={() => navigation.navigate('FindUs')}/>
                 <FiturContent label="Upload Usg" onPress={() => navigation.reset({index: 0, routes:[{name: 'Uploadusg'}]})}/>
             </View>
